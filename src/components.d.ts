@@ -6,38 +6,38 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface AnimatedLogo {
         "height"?: number;
         "imgUrl"?: string;
         "width"?: number;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLAnimatedLogoElement extends Components.AnimatedLogo, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLAnimatedLogoElement: {
+        prototype: HTMLAnimatedLogoElement;
+        new (): HTMLAnimatedLogoElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "animated-logo": HTMLAnimatedLogoElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface AnimatedLogo {
         "height"?: number;
         "imgUrl"?: string;
         "width"?: number;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "animated-logo": AnimatedLogo;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "animated-logo": LocalJSX.AnimatedLogo & JSXBase.HTMLAttributes<HTMLAnimatedLogoElement>;
         }
     }
 }

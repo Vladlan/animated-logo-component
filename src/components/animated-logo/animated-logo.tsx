@@ -1,12 +1,12 @@
 import { Build, Component, Element, h, Host, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
+  tag: 'animated-logo',
+  styleUrl: 'animated-logo.css',
   shadow: true,
   assetsDirs: ['assets']
 })
-export class MyComponent {
+export class AnimatedLogo {
   @Element() el!: HTMLElement;
   private canvasRef!: HTMLCanvasElement;
   private ctx: CanvasRenderingContext2D;
